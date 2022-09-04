@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/decorators">
+	<decorator name="login" page="login-layout.jsp" >
+		<pattern>/auth</pattern> <!-- xác thực => bắt buộc vô servlet (/auth) để getRequestDispatcher đến trang login.jsp (nếu chưa lưu session) -->
+	</decorator>
+	<decorator name="web" page="layout.jsp" >
+		<pattern>/*</pattern>
+	</decorator>
+	<decorator name="admin" page="admin-layout.jsp" >
+		<pattern>/admin*</pattern>
+	</decorator>
+	<decorator name="leader" page="leader-layout.jsp" >
+		<pattern>/leader*</pattern>
+	</decorator>
+	<decorator name="member" page="member-layout.jsp" >
+		<pattern>/member*</pattern>
+	</decorator>
+</decorators>
